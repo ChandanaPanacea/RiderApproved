@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\HariChandana\OneDrive - Panacea Software Solutions\Acumatica\Rider Approved\Test\VendorIntegration (1)\Bin\VendorIntegration.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3CA12396-5D67-420A-B146-7C9423D8D1AC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>VendorIntegration</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>VendorIntegration</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="API\WPSService.cs" />
+    <Compile Include="ItemRecord.cs" />
+    <Compile Include="XSLX\LeatXSLXReader.cs" />
+    <Compile Include="Helpers\ACVIConstants.cs" />
+    <Compile Include="Helpers\ACVIMessages.cs" />
+    <Compile Include="Graph\ACVIFTPSetupMaint.cs" />
+    <Compile Include="Graph\ACVIImportItemProcess.cs" />
+    <Compile Include="Graph\ACVIPOOrderEntryExt.cs" />
+    <Compile Include="FTP\FTPConnectionParameters.cs" />
+    <Compile Include="FTP\FTPService.cs" />
+    <Compile Include="FTP\SFTPService.cs" />
+    <Compile Include="Exceptions\ACVIHandledException.cs" />
+    <Compile Include="DAC\ACVIFTPSetup.cs" />
+    <Compile Include="DAC\ACVIImportItemProcessRecords.cs" />
+    <Compile Include="DAC\ACVIInventoryItemExt.cs" />
+    <Compile Include="DAC\ACVIPOSetupExt.cs" />
+    <Compile Include="DAC\ACVIPOSiteStatusFilterExt.cs" />
+    <Compile Include="DAC\ACVIPOSiteStatusSelectedExt.cs" />
+    <Compile Include="DAC\ACVISetup.cs" />
+    <Compile Include="DAC\ACVIWarehouseSetup.cs" />
+    <Compile Include="DAC\ACVIWarehousesStatus.cs" />
+    <Compile Include="DAC\INSiteStatusByCostCenter.cs" />
+    <Compile Include="DAC\1INSiteStatusByCostCenter.cs" />
+    <Compile Include="DAC\2INSiteStatusByCostCenter.cs" />
+    <Compile Include="CSV\HelmetHouseRecordMap.cs" />
+    <Compile Include="CSV\KlimRecordMap.cs" />
+    <Compile Include="CSV\KYTRecordMap.cs" />
+    <Compile Include="CSV\LS2RecordMap.cs" />
+    <Compile Include="CSV\OnealRecordMap.cs" />
+    <Compile Include="CSV\PURecordMap.cs" />
+    <Compile Include="CSV\SMKRecordMapper.cs" />
+    <Compile Include="API\PUService.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
