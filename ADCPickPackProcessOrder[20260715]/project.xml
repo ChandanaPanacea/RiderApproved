@@ -1,0 +1,86 @@
+<Customization level="6" description="" product-version="26.100">
+    <File AppRelativePath="Bin\ADCPOSource.dll" />
+    <File AppRelativePath="Pages\AD\ADPO5000.aspx" />
+    <File AppRelativePath="Pages\AD\ADPO5000.aspx.cs" />
+    <PerTenantFile AppRelativePath="screens\AD\ADPO5000\ADPO5000.html" ScreenId="ADPO5000" />
+    <PerTenantFile AppRelativePath="screens\AD\ADPO5000\ADPO5000.ts" ScreenId="ADPO5000" />
+    <PerTenantFile AppRelativePath="screens\AD\ADPO5000\views.ts" ScreenId="ADPO5000" />
+    <ScreenWithRights AccessRightsMergeRule="GrantAll">
+        <data-set>
+            <relations format-version="4" relations-version="20250701" main-table="SiteMap">
+                <link from="RolesInCache (ScreenID)" to="SiteMap (ScreenID)" />
+                <link from="RolesInGraph (ScreenID)" to="SiteMap (ScreenID)" />
+                <link from="RolesInMember (ScreenID)" to="SiteMap (ScreenID)" />
+                <link from="Roles (Rolename, ApplicationName)" to="RolesInCache (Rolename, ApplicationName)" type="FromMaster" updateable="False" />
+                <link from="Roles (Rolename, ApplicationName)" to="RolesInGraph (Rolename, ApplicationName)" type="FromMaster" updateable="False" />
+                <link from="Roles (Rolename, ApplicationName)" to="RolesInMember (Rolename, ApplicationName)" type="FromMaster" updateable="False" />
+            </relations>
+            <layout>
+                <table name="SiteMap">
+                    <table name="RolesInCache" uplink="(ScreenID) = (ScreenID)" />
+                    <table name="RolesInGraph" uplink="(ScreenID) = (ScreenID)" />
+                    <table name="RolesInMember" uplink="(ScreenID) = (ScreenID)" />
+                </table>
+                <table name="Roles" />
+            </layout>
+            <data>
+                <SiteMap>
+                    <row Title="Pick Pack Processing" Url="~/Pages/AD/ADPO5000.aspx" ScreenID="ADPO5000" NodeID="64982cf1-bd4c-4e88-b455-68a002fa0996" ParentID="00000000-0000-0000-0000-000000000000" SelectedUI="D">
+                        <RolesInGraph Rolename="*" ApplicationName="/" Accessrights="4" />
+                    </row>
+                </SiteMap>
+                <Roles />
+            </data>
+        </data-set>
+    </ScreenWithRights>
+    <SiteMapNode>
+        <data-set>
+            <relations format-version="4" relations-version="20250701" main-table="SiteMap">
+                <link from="MUIScreen (NodeID)" to="SiteMap (NodeID)" />
+                <link from="MUIWorkspace (WorkspaceID)" to="MUIScreen (WorkspaceID)" type="FromMaster" linkname="workspaceToScreen" split-location="yes" updateable="True" />
+                <link from="MUISubcategory (SubcategoryID)" to="MUIScreen (SubcategoryID)" type="FromMaster" updateable="True" />
+                <link from="MUITile (ScreenID)" to="SiteMap (ScreenID)" />
+                <link from="MUIWorkspace (WorkspaceID)" to="MUITile (WorkspaceID)" type="FromMaster" linkname="workspaceToTile" split-location="yes" updateable="True" />
+                <link from="MUIArea (AreaID)" to="MUIWorkspace (AreaID)" type="FromMaster" updateable="True" />
+                <link from="MUIPinnedScreen (NodeID, WorkspaceID)" to="MUIScreen (NodeID, WorkspaceID)" type="WeakIfEmpty" isEmpty="Username" />
+                <link from="MUIFavoriteWorkspace (WorkspaceID)" to="MUIWorkspace (WorkspaceID)" type="WeakIfEmpty" isEmpty="Username" />
+            </relations>
+            <layout>
+                <table name="SiteMap">
+                    <table name="MUIScreen" uplink="(NodeID) = (NodeID)">
+                        <table name="MUIPinnedScreen" uplink="(NodeID, WorkspaceID) = (NodeID, WorkspaceID)" />
+                    </table>
+                    <table name="MUITile" uplink="(ScreenID) = (ScreenID)" />
+                </table>
+                <table name="MUIWorkspace">
+                    <table name="MUIFavoriteWorkspace" uplink="(WorkspaceID) = (WorkspaceID)" />
+                </table>
+                <table name="MUISubcategory" />
+                <table name="MUIArea" />
+            </layout>
+            <data>
+                <SiteMap>
+                    <row Title="Pick Pack Processing" Url="~/Pages/AD/ADPO5000.aspx" ScreenID="ADPO5000" NodeID="64982cf1-bd4c-4e88-b455-68a002fa0996" ParentID="00000000-0000-0000-0000-000000000000" SelectedUI="D">
+                        <MUIScreen IsPortal="0" WorkspaceID="e2c3849a-6280-41df-81f3-552b91adfae5" Order="150" SubcategoryID="32130442-2305-4394-9389-cf915b191d2a" />
+                    </row>
+                </SiteMap>
+                <MUIWorkspace>
+                    <row IsPortal="0" WorkspaceID="e2c3849a-6280-41df-81f3-552b91adfae5" Order="216" Title="Sales Orders" Icon="pen_frame" AreaID="62cfd5dc-8eb9-4e92-bbcd-e0a99eb5e5df" ScreenID="WSOM0000" IsSystem="0" LayoutMode="0">
+                        <MUIFavoriteWorkspace IsPortal="0" Username="" IsFavorite="1" />
+                    </row>
+                </MUIWorkspace>
+                <MUISubcategory>
+                    <row IsPortal="0" SubcategoryID="32130442-2305-4394-9389-cf915b191d2a" Order="820" Name="Processes" Icon="" IsSystem="0" />
+                </MUISubcategory>
+                <MUIArea>
+                    <row IsPortal="0" AreaID="62cfd5dc-8eb9-4e92-bbcd-e0a99eb5e5df" Order="20" Name="Operations" />
+                </MUIArea>
+            </data>
+        </data-set>
+    </SiteMapNode>
+    <Table TableName="SOLine">
+        <Column TableName="SOLine" ColumnName="UsrPickPackPrinted" ColumnType="bool" AllowNull="True" DecimalPrecision="0" DecimalLength="0" IsNewColumn="True" IsUnicode="True" />
+        <Column TableName="SOLine" ColumnName="UsrUserName" ColumnType="string" AllowNull="True" MaxLength="255" DecimalPrecision="0" DecimalLength="0" IsNewColumn="True" IsUnicode="True" />
+        <Column TableName="SOLine" ColumnName="UsrProcessedDate" ColumnType="date" AllowNull="True" DecimalPrecision="0" DecimalLength="0" IsNewColumn="True" IsUnicode="True" />
+    </Table>
+</Customization>

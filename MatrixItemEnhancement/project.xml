@@ -1,0 +1,107 @@
+<Customization level="4" description="" product-version="26.100">
+    <Page path="~/Pages/AC/AC5010ME.aspx" pageSource="jZNRb9owEMefW6nfwfLUVwKb+lJBNRagRSoVghb2Nh3JFaw6dmo7he5hn31nJ5QwykSe7LvL3//7nd2+/M7GsER2D2pZ0KLD4y+cjcA6ND4xEJJif6JdxEYDbbIeOhCykYUwZ93C6f4bKjcXBou8w50pkLMZSJGCwwm+Fmhdhz+DtBSPdVopd+OrZqs56jfA5ptGYjkbqhUa4WyH+9N+bQs4exTO//GknF+kwTdnlzcX523qojT4+J4jmwnjCpBjcKsTrHsBkqDzr2OtHPXAhr0OT2jd8k5DaCwhwTstUzQ+ma96U84mhQLqaYrmjYRI5qydb67HP3vgYKoLk2BQSqkpU5baspQcWrHwzTwGTHORequtZvOSX5yz6vO9PEBGVSNwRmyGDrO+WoFKMCNLjeFDoxuP+rvkU+5ZD9VrTWRsRAbmfSZwTadhlksqIfS+9V2V937WjkHKBSQvsc4yUKkNYCgefZKg6D+9+jlENYo3R6B+PQ51cJypH5xvIsg80+aA6c7JFrqPjDBboDlofQ85u0OxXLmwyzd0maXUa3+j70SK2ztbItrKhF1l7R7edeEmhSzHXQ+0DlxOHRg30etq9FEpG9V1K7Lbjk/l+u0419vjXG+NSIPEkhYnMP2c21XgNn0RyteVD8z+F+Q9vqG0dYzeSYjuzY1Q2fKXM39R27GWRabsLuK/XTray1ckP5Qr2LWz297dVPzGwA6E8mfOhUr1mrO+Anqk6faVjoSqNcxZNbtu4oRWP8BUryj6CNSG6S0cDPIv" />
+    <File AppRelativePath="Bin\MatrixItemEnhancement.dll" />
+    <File AppRelativePath="Bin\MatrixItemEnhancement.pdb" />
+    <File AppRelativePath="Pages\AC\AC5010ME.aspx" />
+    <File AppRelativePath="Pages\AC\AC5010ME.aspx.cs" />
+    <PerTenantFile AppRelativePath="screens\AC\AC5010ME\AC5010ME.html" ScreenId="AC5010ME" />
+    <PerTenantFile AppRelativePath="screens\AC\AC5010ME\AC5010ME.ts" ScreenId="AC5010ME" />
+    <PerTenantFile AppRelativePath="screens\IN\IN203000\Extensions\IN203000_ACME.html" ScreenId="IN203000" />
+    <PerTenantFile AppRelativePath="screens\IN\IN203000\Extensions\IN203000_ACME.ts" ScreenId="IN203000" />
+    <ScreenWithRights AccessRightsMergeRule="CopyFromTenant">
+        <data-set>
+            <relations format-version="4" relations-version="20250701" main-table="SiteMap">
+                <link from="RolesInCache (ScreenID)" to="SiteMap (ScreenID)" />
+                <link from="RolesInGraph (ScreenID)" to="SiteMap (ScreenID)" />
+                <link from="RolesInMember (ScreenID)" to="SiteMap (ScreenID)" />
+                <link from="Roles (Rolename, ApplicationName)" to="RolesInCache (Rolename, ApplicationName)" type="FromMaster" updateable="False" />
+                <link from="Roles (Rolename, ApplicationName)" to="RolesInGraph (Rolename, ApplicationName)" type="FromMaster" updateable="False" />
+                <link from="Roles (Rolename, ApplicationName)" to="RolesInMember (Rolename, ApplicationName)" type="FromMaster" updateable="False" />
+            </relations>
+            <layout>
+                <table name="SiteMap">
+                    <table name="RolesInCache" uplink="(ScreenID) = (ScreenID)" />
+                    <table name="RolesInGraph" uplink="(ScreenID) = (ScreenID)" />
+                    <table name="RolesInMember" uplink="(ScreenID) = (ScreenID)" />
+                </table>
+                <table name="Roles" />
+            </layout>
+            <data>
+                <SiteMap>
+                    <row Position="21523" Title="Update Matrix Items" Url="~/Pages/AC/AC5010ME.aspx" ScreenID="AC5010ME" NodeID="bdb68d31-33e5-426a-a232-1c5675483262" ParentID="00000000-0000-0000-0000-000000000000" SelectedUI="D">
+                        <RolesInGraph Rolename="Customizer" ApplicationName="/" Accessrights="4" />
+                    </row>
+                </SiteMap>
+                <Roles>
+                    <row Rolename="Customizer" ApplicationName="/" Descr="Customizer" Guest="0" />
+                </Roles>
+            </data>
+        </data-set>
+    </ScreenWithRights>
+    <SiteMapNode>
+        <data-set>
+            <relations format-version="4" relations-version="20250701" main-table="SiteMap">
+                <link from="MUIScreen (NodeID)" to="SiteMap (NodeID)" />
+                <link from="MUIWorkspace (WorkspaceID)" to="MUIScreen (WorkspaceID)" type="FromMaster" linkname="workspaceToScreen" split-location="yes" updateable="True" />
+                <link from="MUISubcategory (SubcategoryID)" to="MUIScreen (SubcategoryID)" type="FromMaster" updateable="True" />
+                <link from="MUITile (ScreenID)" to="SiteMap (ScreenID)" />
+                <link from="MUIWorkspace (WorkspaceID)" to="MUITile (WorkspaceID)" type="FromMaster" linkname="workspaceToTile" split-location="yes" updateable="True" />
+                <link from="MUIArea (AreaID)" to="MUIWorkspace (AreaID)" type="FromMaster" updateable="True" />
+                <link from="MUIPinnedScreen (NodeID, WorkspaceID)" to="MUIScreen (NodeID, WorkspaceID)" type="WeakIfEmpty" isEmpty="Username" />
+                <link from="MUIFavoriteWorkspace (WorkspaceID)" to="MUIWorkspace (WorkspaceID)" type="WeakIfEmpty" isEmpty="Username" />
+            </relations>
+            <layout>
+                <table name="SiteMap">
+                    <table name="MUIScreen" uplink="(NodeID) = (NodeID)">
+                        <table name="MUIPinnedScreen" uplink="(NodeID, WorkspaceID) = (NodeID, WorkspaceID)" />
+                    </table>
+                    <table name="MUITile" uplink="(ScreenID) = (ScreenID)" />
+                </table>
+                <table name="MUIWorkspace">
+                    <table name="MUIFavoriteWorkspace" uplink="(WorkspaceID) = (WorkspaceID)" />
+                </table>
+                <table name="MUISubcategory" />
+                <table name="MUIArea" />
+            </layout>
+            <data>
+                <SiteMap>
+                    <row Position="21523" Title="Update Matrix Items" Url="~/Pages/AC/AC5010ME.aspx" ScreenID="AC5010ME" NodeID="bdb68d31-33e5-426a-a232-1c5675483262" ParentID="00000000-0000-0000-0000-000000000000" SelectedUI="D">
+                        <MUIScreen IsPortal="0" WorkspaceID="6557c1c6-747e-45bb-9072-54f096598d61" Order="100" SubcategoryID="32130442-2305-4394-9389-cf915b191d2a" />
+                    </row>
+                </SiteMap>
+                <MUIWorkspace>
+                    <row IsPortal="0" WorkspaceID="6557c1c6-747e-45bb-9072-54f096598d61" Order="284" Title="Inventory" Icon="local_shipping" AreaID="62cfd5dc-8eb9-4e92-bbcd-e0a99eb5e5df" ScreenID="WSIN0000" IsSystem="0" LayoutMode="0">
+                        <MUIFavoriteWorkspace IsPortal="0" Username="" IsFavorite="1" />
+                    </row>
+                </MUIWorkspace>
+                <MUISubcategory>
+                    <row IsPortal="0" SubcategoryID="32130442-2305-4394-9389-cf915b191d2a" Order="820" Name="Processes" Icon="" IsSystem="0" />
+                </MUISubcategory>
+                <MUIArea>
+                    <row IsPortal="0" AreaID="62cfd5dc-8eb9-4e92-bbcd-e0a99eb5e5df" Order="20" Name="Operations" />
+                </MUIArea>
+            </data>
+        </data-set>
+    </SiteMapNode>
+    <Sql TableName="ACMEColorByTemplateItem" TableSchemaXml="#CDATA">
+        <CDATA name="TableSchemaXml"><![CDATA[<table name="ACMEColorByTemplateItem">
+  <col name="CompanyID" type="Int" default="Zero" />
+  <col name="LinkID" type="Int" identity="true" />
+  <col name="TemplateItemID" type="Int"/>
+  <col name="Color" type="NVarChar(256)" />
+  <col name="IsActive" type="bit"/>
+  <col name="CreatedByID" type="UniqueIdentifier" />
+  <col name="CreatedByScreenID" type="Char(8)" />
+  <col name="CreatedDateTime" type="DateTime" />
+  <col name="LastModifiedByID" type="UniqueIdentifier" />
+  <col name="LastModifiedByScreenID" type="Char(8)" />
+  <col name="LastModifiedDateTime" type="DateTime" />
+  <col name="tstamp" type="Timestamp" />
+  <col name="NoteID" type="UniqueIdentifier" nullable="true" />
+  <index name="PK_ACMEColorByTemplateItem" clustered="true" primary="true" unique="true">
+    <col name="CompanyID" />
+    <col name="LinkID" />
+  </index>
+  </table>]]></CDATA>
+    </Sql>
+</Customization>

@@ -1,0 +1,42 @@
+<template>
+	<qp-template id="form-ACME"
+				 name="17-17-14">
+
+		<qp-fieldset id="fsFilter-ACME"
+					 view.bind="TemplateFilter"
+					 slot="A">
+			<field name="TemplateItemID"></field>
+		</qp-fieldset>
+
+		<qp-fieldset id="fsBulkUpdatePrices-ACME"
+					 view.bind="TemplateFilter"
+					 slot="B"
+					 caption="Bulk Update">
+
+			<field name="DfltPrice"></field>
+			<field name="DfltVendorPrice"></field>
+			<field name="Min"></field>
+			<field name="Max"></field>
+		</qp-fieldset>
+
+		<qp-fieldset id="fsBulkUpdateSettings-ACME"
+					 view.bind="TemplateFilter"
+					 slot="C"
+					 caption="Bulk Update">
+
+			<field name="Visibility"></field>
+			<field name="Availability"></field>
+		</qp-fieldset>
+
+	</qp-template>
+
+	<qp-resizer id="rowsResizer-ACME"
+				initial-size="500px">
+
+		<qp-grid id="gridRows-ACME"
+				 view.bind="Rows"
+				 wg-container="Rows_grid">
+		</qp-grid>
+
+	</qp-resizer>
+</template>
