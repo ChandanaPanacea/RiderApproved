@@ -1,0 +1,14 @@
+<template>
+	<qp-template id="form_div0" name="1-1-1">
+		<qp-fieldset id="ADCPOSource_form0_fs" wg-container="ADCPOSource_form" view.bind="PickPackFilter" slot="A">
+			<field name="POSource"></field>
+		</qp-fieldset>
+		<qp-fieldset id="ADCPOSource_form1_fs" wg-container="ADCPOSource_form" view.bind="PickPackFilter" slot="B">
+			<field name="ShipVia"></field>
+		</qp-fieldset>
+		<qp-fieldset id="ADCPOSource_form2_fs" wg-container="ADCPOSource_form" view.bind="PickPackFilter" slot="C">
+			<field name="IsPrintedReport"></field>
+		</qp-fieldset>
+	</qp-template>
+	<qp-grid id="grid" view.bind="PickPackOrders"></qp-grid>
+</template>

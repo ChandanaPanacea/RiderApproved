@@ -1,0 +1,32 @@
+<template>
+	<field after="#fsColumnB-SiteStatusLookup [name='OnlyAvailable']"
+		   name="UsrFilterByQty">
+	</field>
+
+	<field after="#fsColumnB-SiteStatusLookup [name='UsrFilterByQty']"
+		   name="UsrQtyRangeRow"
+		   unbound
+		<field after="#fsColumnB-SiteStatusLookup [name='UsrFilterByQty']"
+			   name="UsrQtyRangeRow" slot="label"
+			   unbound>
+			<qp-label caption="From" class="col-lg-2 col-md-2 col-sm-3"></qp-label>
+			<qp-field control-state.bind="ItemFilter.UsrMinQty"
+					  class="col-lg-3 col-md-3 col-sm-6">
+			</qp-field>
+			<qp-label caption="To" class="col-lg-2 col-md-2 col-sm-2"></qp-label>
+			<qp-field control-state.bind="ItemFilter.UsrMaxQty"
+					  class="col-lg-3 col-md-3 col-sm-6">
+			</qp-field>
+		</field>
+	</field>
+</template>
+
+
+<!--<qp-field control-state.bind="ItemFilter.UsrMaxQty"
+		  config-label.bind="'To'"
+		  class="col-lg-3 col-md-3 col-sm-6">
+</qp-field>-->
+<!--<qp-field control-state.bind="ItemFilter.UsrMaxQty"
+		  config-label.bind="'To'"
+		  class="col-lg-3 col-md-3 col-sm-6">
+</qp-field>-->

@@ -1,0 +1,13 @@
+<template>
+	<qp-tab id="tab-ACVI" caption="Rider approved" after="#tab-General">
+		<qp-template id="form-ACVI" name="1-1" wg-container="Setup_tab">
+			<div id="divColumnA-ACVI" slot="A">
+				<qp-fieldset id="fsACVISites" view.bind="Setup" caption="Sites">
+					<field name="UsrSite1ID" config-allow-edit.bind="true"></field>
+					<field name="UsrSite2ID" config-allow-edit.bind="true"></field>
+					<field name="UsrSite3ID" config-allow-edit.bind="true"></field>
+				</qp-fieldset>
+			</div>
+		</qp-template>
+	</qp-tab>
+</template>
